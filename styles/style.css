@@ -179,7 +179,15 @@ footer {
 	align-items: center;
 }
 
-footer a {
+footer a:active {
+	color: white;
+}
+
+footer a:visited {
+	color: white;
+}
+
+footer a:link {
 	color: white;
 	margin: 0px 10px;
 }
