@@ -1,0 +1,248 @@
+:root {
+	--brown: rgb(86, 63, 44);
+	--light-brown: rgb(111,100,80);
+	--black: rgb(15, 13, 8);
+	--white: rgb(248, 247, 227);
+	--green: rgb(82, 77, 37);
+	--shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+  --shadow-lg: 0 15px 30px 0 rgba(0,0,0,0.11);
+}
+
+* {
+	margin: 0px;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header {
+	height: 40vh;
+	background: var(--brown);
+	background-image: url("./img/john-salzarulo-wtjrpjZABcQ-unsplash.jpg");
+	background-size: cover;
+
+	/* border-bottom: 5px solid var(--shadow-lg); */
+	box-shadow: 0 8px 6px -6px black;
+	/* border-bottom: 5px solid var(--shadow-lg);
+	box-shadow: var(--shadow); */
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+header:hover {
+	color: white;
+}
+header h1 {
+	font-size: 100px;
+	color: rgba(255, 255, 255, 0.8);
+
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	transform-origin: bottom;
+	animation-name: bounce-7;
+	animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+	animation-play-state: paused;
+}
+header h1:hover {
+	animation-play-state: running;
+}
+header h2 {
+	color: var(--white);
+}
+header h2:hover {
+	letter-spacing: 1px;
+	transform: scale(1.1)
+}
+
+@keyframes bounce-7 {
+	0%   { transform: scale(1,1)      translateY(0); }
+	10%  { transform: scale(1.1,.9)   translateY(0); }
+	30%  { transform: scale(.9,1.1)   translateY(-10px); }
+	50%  { transform: scale(1.05,.95) translateY(0); }
+	57%  { transform: scale(1,1)      translateY(-4px); }
+	64%  { transform: scale(1,1)      translateY(0); }
+	100% { transform: scale(1,1)      translateY(0); }
+}
+
+.page-wrapper {
+	/* height: 100vh; */
+	/* width: 90vw; */
+	margin-right: 20vw; 
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+.stuff {
+	width: 70vw;
+	text-align: center;
+}
+.stuff a {
+	color: black;
+}
+
+.stuff a:hover {
+	color: rgb(111, 111, 111);
+}
+
+aside {
+	position: fixed;
+	right: 0px;
+	
+	margin-top: 7.5vh;
+	width: 230px;
+	height: 87%;
+	background: rgba(111, 111, 111, 0.2);
+	color: var(--black);
+
+	box-sizing: border-box;
+	padding: 10px;
+
+	border-radius: 20px 0px 0px 20px;
+	border-top: 4px solid rgb(41, 41, 41);
+	border-left: 4px solid rgb(41, 41, 41);
+	border-bottom: 4px solid rgb(41, 41, 41);
+}
+
+aside h3 {
+	text-align: center;
+	color: rgb(41, 41, 41);
+}
+
+aside a:link {
+	color: var(--black);
+	text-decoration: none;
+	text-decoration: underline;
+}
+aside a:visited {
+	text-decoration: none;
+	color: var(--black);
+}
+aside a:hover {
+	text-decoration: underline;
+	/* transform: scale(1.8); */
+	color: grey;
+}
+aside a:active {
+  text-decoration: underline;
+}
+
+.summary {
+	color: var(--black);
+	text-align: left;
+	box-sizing: border-box;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.preamble {
+	background: rgb(41, 41, 41);
+	color: white;
+
+	box-sizing: border-box;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.preamble h3 {
+	font-size: 40px;
+}
+.preamble h3:hover {
+	letter-spacing: 4px;
+	background: white;
+	color: rgb(41, 41, 41);
+}
+.preamble p:hover {
+	background: white;
+	color: rgb(41, 41, 41);
+}
+
+
+.main_supporting {
+	color: rgb(41, 41, 41);
+}
+.main_supporting h3 {
+	margin: 10px 0px;
+}
+
+.main_supporting h3:hover {
+	background: rgb(41, 41, 41);
+	color: white;
+	transform: scale(1.1);
+}
+
+footer {
+	height: 80px;
+	margin: 10px 0px;
+	background:rgb(41, 41, 41);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+footer a {
+	color: white;
+	margin: 0px 10px;
+}
+
+footer a:hover {
+	color: grey;
+}
+
+@media only screen and (max-width: 800px) {
+	body {
+		/* height: 100vh; */
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.page-wrapper {
+		/* height: 100vh; */
+		/* width: 90vw; */ 
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	.stuff {
+		width: 70vw;
+		text-align: center;
+	}
+  aside {
+		display: block;
+		position: static;
+		width: 70vw;
+		height: auto;
+		margin-top: 0px;
+		margin-bottom: 10px;
+		background: rgba(111, 111, 111, 0.2);
+		color: var(--black);
+	
+		box-sizing: border-box;
+	
+		border-radius: 0px 0px 20px 20px;
+		border-right: 4px solid rgb(41, 41, 41);
+		border-left: 4px solid rgb(41, 41, 41);
+		border-bottom: 4px solid rgb(41, 41, 41);
+	}
+	.page-wrapper {
+		/* height: 100vh; */
+		/* width: 90vw; */
+		margin-right: 0vw; 
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+	}
+	header h1:hover {
+		animation-play-state: paused;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+  header h1 {
+		font-size: 50px;
+	}
+	.preamble h3 {
+		font-size: 25px;
+	}
+}
